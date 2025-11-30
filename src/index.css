@@ -1,0 +1,10 @@
+@import "tailwindcss";
+/* in your main CSS where @tailwind base/components/utilities exist */
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&display=swap");
+
+@theme {
+  --font-domine: "Domine", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
