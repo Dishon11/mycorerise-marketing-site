@@ -2,11 +2,18 @@ import React from "react";
 import Card from "./cards";
 import { Icon } from "@iconify/react";
 import { features } from "../arraySet/features.js";
+import { motion } from "framer-motion";
 
 export default function Features() {
   return (
-    <section className="bg-neutral-50 py-20 " id="features"s>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-neutral-50 py-20 " id="features" s>
+      <motion.div
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <div className="text-center mb-20">
           <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 text-sm font-medium rounded-full mb-6">
             Features
@@ -36,7 +43,7 @@ export default function Features() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <section className="bg-white py-20" id="aboutUs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <div className="text-center">
           <div className="inline-block px-4 py-2 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full mb-6 mx-auto">
             Our story
@@ -19,9 +26,13 @@ export default function About() {
           </div>
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm flex flex-col md:flex-row items-start gap-4">
-              
-
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm flex flex-col md:flex-row items-start gap-4"
+            >
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">
                   Divyank Surum
@@ -35,10 +46,15 @@ export default function About() {
                   workers in real life.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm flex flex-col md:flex-row items-start gap-4">
-              
+            <motion.div
+              className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm flex flex-col md:flex-row items-start gap-4"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">
                   Dishon John Siddapur
@@ -52,17 +68,23 @@ export default function About() {
                   genuinely helpful for people who feel stuck starting.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="mt-10 text-center max-w-3xl mx-auto pb-16">
-            <p className="text-sm md:text-base text-gray-600">
+            <motion.p
+              className="text-sm md:text-base text-gray-600"
+              initial={{ opacity: 0, y: -40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               Our aim is to build something that helps people feel more
               grounded, resilient and consistent—one small step at a time.
-            </p>
+            </motion.p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

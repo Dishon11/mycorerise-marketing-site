@@ -2,11 +2,18 @@ import React from "react";
 import { programs } from "../arraySet/program.js";
 import Card from "./cards";
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 
 export default function Program() {
   return (
-    <section className="bg-white py-20" id="who-its-for"s>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-20" id="who-its-for" s>
+      <motion.div
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <div className="text-center mb-20">
           <div className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full mb-6 mx-auto">
             Who it's for
@@ -27,7 +34,6 @@ export default function Program() {
                 key={item.title}
                 iconWrapperClass="bg-emerald-100 text-emerald-700"
                 icon={
-                    
                   <Icon icon={item.icon} className="w-6 h-6 text-emerald-700" />
                 }
                 title={item.title}
@@ -36,7 +42,7 @@ export default function Program() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -12,7 +12,7 @@ export const faqs = [
   {
     question: "When are you launching the beta?",
     answer:
-      "We’re aiming to open the beta in early 2026. Everyone on the early access list will get the first invites.",
+      "We’re aiming to open the beta in December 2025. Everyone on the early access list will get the first invites.",
   },
   {
     question: "Do I need a gym or equipment?",
